@@ -1,0 +1,32 @@
+﻿
+@using WebApplication1.Models
+@using WebApplication1.ViewModels
+@*@model List<Employer>*@
+@model HomeViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Employer</h2>
+
+<ul>
+
+    @foreach (var employer in Model.employers)
+    {
+        <li>
+           @employer.Id @employer.Name @employer.Surname @employer.Department 
+        </li>
+    }
+</ul>
+
+<ul>
+    <li>
+        @foreach (var cities in Model.Cities)
+        {
+        <li>
+           @cities
+        </li>
+        }
+    </ul>
+
